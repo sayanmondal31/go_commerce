@@ -6,6 +6,7 @@
 - Product edit -> PATCH version_v1/products/:id
 - Product delete -> DELETE version_v1/products/:id
 
+```
 # folder structure
 go-commerce/
 ├── cmd/
@@ -80,6 +81,7 @@ go-commerce/
 ├── go.sum
 ├── Makefile                       # Build and development commands
 └── README.md
+```
 
 The structure uses dependency injection and interfaces, making it easy to swap implementations (e.g., switching from PostgreSQL to MongoDB) without changing business logic. This approach is widely adopted in Go microservices and follows patterns used by companies like Uber, Netflix, and other tech companies using Go for e-commerce platforms.
 
