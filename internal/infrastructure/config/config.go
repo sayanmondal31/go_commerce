@@ -1,5 +1,6 @@
 package config
 
+
 import (
 	"os"
 
@@ -37,3 +38,4 @@ func getEnv(key, defaultValue string) string {
 	}
 	return defaultValue
 }
+
