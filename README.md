@@ -81,6 +81,8 @@ go-commerce/
 ├── Makefile                       # Build and development commands
 └── README.md
 
+The structure uses dependency injection and interfaces, making it easy to swap implementations (e.g., switching from PostgreSQL to MongoDB) without changing business logic. This approach is widely adopted in Go microservices and follows patterns used by companies like Uber, Netflix, and other tech companies using Go for e-commerce platforms.
+
 # Initialize the project
 go mod init go-commerce
 
@@ -88,6 +90,8 @@ go mod init go-commerce
 go get github.com/gin-gonic/gin
 go get github.com/lib/pq  # PostgreSQL driver
 go get github.com/golang-migrate/migrate/v4
+go get github.com/joho/godotenv  # Environment variables
+go get github.com/google/uuid    # UUID generation
 
 # Run the application
 make run
