@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"go.starlark.net/lib/time"
 )
 
 type Service struct {
@@ -68,7 +67,7 @@ func (s *Service) UpdateProduct(ctx context.Context, id uuid.UUID, req *UpdatePr
 	}
 
 	if req.Description != nil {
-		product.Name = *req.Description
+		product.Description = *req.Description
 	}
 
 	if req.Price != nil {
@@ -105,4 +104,6 @@ func (s *Service) DeleteProduct(ctx context.Context, id uuid.UUID) error {
 
 }
 
-func (s *Service) Perma
+func (s *Service) PermanentDeleteProduct(ctx context.Context, id uuid.UUID) error {
+	return s.repo.Delete(ctx, id)
+}

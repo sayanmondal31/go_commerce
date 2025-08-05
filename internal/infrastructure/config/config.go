@@ -1,6 +1,5 @@
 package config
 
-
 import (
 	"os"
 
@@ -23,10 +22,19 @@ func Load() (*Config, error) {
 		Port:       getEnv("PORT", "8080"),
 		DBHost:     getEnv("DB_HOST", "localhost"),
 		DBPort:     getEnv("DB_PORT", "5432"),
-		DBUser:     getEnv("DB_USER", "postgres"),
-		DBPassword: getEnv("DB_PASSWORD", "password"),
-		DBName:     getEnv("DB_NAME", "go_commerce"),
+		DBUser:     getEnv("DB_USER", "admin"),
+		DBPassword: getEnv("DB_PASSWORD", "admin"),
+		DBName:     getEnv("DB_NAME", "products"),
 	}
+
+	// config := &Config{
+	// 	Port:       getEnv("PORT", "8080"),
+	// 	DBHost:     getEnv("DB_HOST", "db.ihjcvjxthqzcoukulojk.supabase.co"),
+	// 	DBPort:     getEnv("DB_PORT", "5432"),
+	// 	DBUser:     getEnv("DB_USER", "postgres"),
+	// 	DBPassword: getEnv("DB_PASSWORD", "admin@123"),
+	// 	DBName:     getEnv("DB_NAME", "postgres"),
+	// }
 
 	return config, nil
 }
@@ -38,4 +46,3 @@ func getEnv(key, defaultValue string) string {
 	}
 	return defaultValue
 }
-
