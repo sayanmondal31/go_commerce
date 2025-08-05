@@ -6,6 +6,11 @@
 - Product edit -> PATCH version_v1/products/:id
 - Product delete -> DELETE version_v1/products/:id
 
+RUN command
+```
+make deps && make run
+```
+
 ```
 # folder structure
 go-commerce/
